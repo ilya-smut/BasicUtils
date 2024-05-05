@@ -40,6 +40,8 @@ def is_english(message, word_percentage=20, letter_percentage=85):
     # By default, 20% of the words must exist in the dictionary file, and
     # 85% of all the characters in the message must be letters or spaces
     # (not punctuation or numbers).
+    if type(message) is not str:
+        return False
     words_match = get_english_count(message) * 100 >= word_percentage
     letters_match = (len(remove_non_letters(message)) / len(message)) * 100 >= letter_percentage
 
