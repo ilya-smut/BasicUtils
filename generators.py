@@ -1,4 +1,5 @@
-import copy, gcd
+import copy
+from BasicUtils.gcd import gcd
 
 
 def plus(modulo):
@@ -24,7 +25,7 @@ def multiply(modulo):
     generators = []
     space = []
     for i in range(1, modulo):
-        if gcd.gcd(i, modulo) == 1:
+        if gcd(i, modulo) == 1:
             space.append(i)
 
     for num in space:

@@ -1,4 +1,4 @@
-from gcd import gcd
+from BasicUtils.gcd import gcd
 
 def findModInverse(a, m):
     if gcd(a, m) != 1:
